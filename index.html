@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,6 +23,24 @@
             overflow-y: scroll;
         }
 
+        @font-face {
+            font-family: 'RobotoRegular';
+            src: url('fonts/Roboto/Roboto-Regular.ttf') format('opentype');
+            font-weight: normal;
+        }
+
+        @font-face {
+            font-family: 'RobotoBold';
+            src: url('fonts/Roboto/Roboto-Bold.ttf') format('opentype');
+            font-weight: normal;
+        }
+
+        @font-face {
+            font-family: 'RobotoMedium';
+            src: url('fonts/Roboto/Roboto-Medium.ttf') format('opentype');
+            font-weight: 500;
+        }
+
         .header {
             text-align: left;
             margin: 0;
@@ -42,23 +61,25 @@
         }
 
         .illustration {
-            text-align: center;
-            margin-top: 20px;
+            text-align: right;
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin: 0;
+            padding: 0;
         }
 
         .illustration img {
-            width: 100%;
-            max-width: 160px;
+            width: 160px;
             height: auto;
         }
 
-        .permission-first-item,
-        .permission-item {
+        .permission-first-item, .permission-item {
             display: flex;
             gap: 16px;
             margin-top: 20px;
             align-items: flex-start;
-            flex-wrap: wrap;
+            flex-wrap: nowrap;
         }
 
         .icon {
@@ -68,11 +89,6 @@
             margin-top: 4px;
             object-fit: contain;
             filter: brightness(0) saturate(100%) invert(20%) sepia(16%) saturate(1500%) hue-rotate(175deg) brightness(100%) contrast(90%);
-        }
-
-        .permission-content {
-            flex: 1;
-            min-width: 0;
         }
 
         .permission-title {
@@ -103,6 +119,7 @@
         }
 
         .policy-link:hover {
+            font-family: 'RobotoMedium';
             text-decoration: underline;
         }
 
@@ -112,30 +129,9 @@
             margin-top: 24px;
         }
 
-        /* Media Query for Smaller Screens */
-        @media (max-width: 768px) {
-            .permission-first-item,
-            .permission-item {
-                flex-direction: column;
-                gap: 8px;
-                align-items: flex-start;
-            }
-
-            .icon {
-                margin-top: 0;
-            }
-
-            .title {
-                font-size: 18px;
-            }
-
-            .subtitle, .permission-title {
-                font-size: 14px;
-            }
-
-            .permission-subtitle, .policy-text {
-                font-size: 12px;
-            }
+        .permission-content {
+            flex: 1;
+            min-width: 0;
         }
     </style>
 </head>
@@ -147,14 +143,15 @@
     </div>
 
     <div class="illustration">
-        <img src="https://cdn.prod.website-files.com/6410c4927a4ae326761f2b26/646261b96b63336c71370086_blackbuck.webp" alt="Delivery truck illustration">
+        <img src="images/truck_load.webp" alt="Delivery truck illustration">
     </div>
 
     <div class="permission-first-item">
         <img src="images/call-permission.png" alt="Phone icon" class="icon">
         <div class="permission-content">
             <p class="permission-title">Manage phone calls</p>
-            <p class="permission-subtitle">BlackBuck needs to manage your phone calls to help you call verified transporters with one tap from the app.</p>
+            <p class="permission-subtitle">BlackBuck needs to manage your phone calls to help you call verified
+                transporters with one tap from the app.</p>
         </div>
     </div>
 
@@ -162,7 +159,8 @@
         <img src="images/call-permission.png" alt="Call logs icon" class="icon">
         <div class="permission-content">
             <p class="permission-title">Store your Call Logs</p>
-            <p class="permission-subtitle">BlackBuck stores your call log data to sync your call history, show transporter caller ID and provide ratings on calls made through BlackBuck</p>
+            <p class="permission-subtitle">BlackBuck stores your call log data to sync your call history, show
+                transporter caller ID and provide ratings on calls made through BlackBuck</p>
         </div>
     </div>
 
@@ -170,7 +168,8 @@
         <img src="images/location-permission.png" alt="Location icon" class="icon">
         <div class="permission-content">
             <p class="permission-title">Store your Location</p>
-            <p class="permission-subtitle">BlackBuck stores your location data to update your profile with the location for relevant load recommendations and enhanced search experience.</p>
+            <p class="permission-subtitle">BlackBuck stores your location data to update your profile with the location
+                for relevant load recommendations and enhanced search experience.</p>
         </div>
     </div>
 
@@ -185,11 +184,13 @@
     <div class="divider"></div>
 
     <div class="policy-text">
-        <p>To know more about how we collect and use your data, please read our <a href="privacy-policy-bb-app.html" class="policy-link">Privacy Policy</a></p>
+        <p>To know more about how we collect and use your data, please read our <a href="privacy-policy-bb-app.html"
+                class="policy-link">PrivacyPolicy</a></p>
     </div>
 
     <div class="policy-text">
-        <p>By selecting "Agree" you confirm that you have read and agree to the <a href="terms-n-conditions-bb-app.html" class="policy-link">Terms & Conditions</a></p>
+        <p>By selecting "Agree"you confirm that you have read and agree to the <a href="terms-n-conditions-bb-app.html"
+                class="policy-link">Terms & Conditions</a></p>
     </div>
 </body>
 
