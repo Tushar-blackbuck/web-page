@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlackBuck Permissions</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            line-height: 1.5;
+            color: #0D2C40;
+            background-color: #fff;
+            padding-left: 24px;
+            padding-right: 24px;
+            margin: 0 auto;
+            overflow-y: scroll;
+        }
+
+        @font-face {
+            font-family: 'RobotoRegular';
+            src: url('fonts/Roboto/Roboto-Regular.ttf') format('opentype');
+            font-weight: normal;
+        }
+
+        @font-face {
+            font-family: 'RobotoBold';
+            src: url('fonts/Roboto/Roboto-Bold.ttf') format('opentype');
+            font-weight: normal;
+        }
+
+        @font-face {
+            font-family: 'RobotoMedium';
+            src: url('fonts/Roboto/Roboto-Medium.ttf') format('opentype');
+            font-weight: 500;
+        }
+
+        .header {
+            text-align: left;
+            margin: 0;
+        }
+
+        .title {
+            font-family: 'RobotoBold';
+            font-size: 20px;
+            color: #0D2C40;
+            margin: 0;
+        }
+
+        .subtitle {
+            font-family: 'RobotoRegular';
+            font-size: 16px;
+            color: #0D2C40;
+            margin: 0;
+        }
+
+        .illustration {
+            text-align: right;
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .illustration img {
+            width: 160px;
+            height: auto;
+        }
+
+        .permission-first-item, .permission-item {
+            display: flex;
+            gap: 16px;
+            margin-top: 20px;
+            align-items: flex-start;
+            flex-wrap: nowrap;
+        }
+
+        .icon {
+            width: 14px;
+            height: 14px;
+            flex: 0 0 14px;
+            margin-top: 4px;
+            object-fit: contain;
+            filter: brightness(0) saturate(100%) invert(20%) sepia(16%) saturate(1500%) hue-rotate(175deg) brightness(100%) contrast(90%);
+        }
+
+        .permission-title {
+            font-family: 'RobotoRegular';
+            font-size: 14px;
+            color: #0D2C40;
+        }
+
+        .permission-subtitle {
+            font-family: 'RobotoMedium';
+            margin-top: 4px;
+            color: #9B9B9B;
+            font-size: 12px;
+        }
+
+        .policy-text {
+            font-family: 'RobotoMedium';
+            color: #9B9B9B;
+            font-size: 14px;
+            margin-top: 12px;
+            line-height: 1.6;
+        }
+
+        .policy-link {
+            font-family: 'RobotoMedium';
+            color: #ff3366;
+            text-decoration: none;
+        }
+
+        .policy-link:hover {
+            font-family: 'RobotoMedium';
+            text-decoration: underline;
+        }
+
+        .divider {
+            height: 2px;
+            background-color: #F6F6F6;
+            margin-top: 24px;
+        }
+
+        .permission-content {
+            flex: 1;
+            min-width: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <p class="title">BlackBuck</p>
+        <p class="subtitle">Needs permission to</p>
+    </div>
+
+    <div class="illustration">
+        <img src="images/truck_load.webp" alt="Delivery truck illustration">
+    </div>
+
+    <div class="permission-first-item">
+        <img src="images/call-permission.png" alt="Phone icon" class="icon">
+        <div class="permission-content">
+            <p class="permission-title">Manage phone calls</p>
+            <p class="permission-subtitle">BlackBuck needs to manage your phone calls to help you call verified
+                transporters with one tap from the app.</p>
+        </div>
+    </div>
+
+    <div class="permission-item">
+        <img src="images/call-permission.png" alt="Call logs icon" class="icon">
+        <div class="permission-content">
+            <p class="permission-title">Store your Call Logs</p>
+            <p class="permission-subtitle">BlackBuck stores your call log data to sync your call history, show
+                transporter caller ID and provide ratings on calls made through BlackBuck</p>
+        </div>
+    </div>
+
+    <div class="permission-item">
+        <img src="images/location-permission.png" alt="Location icon" class="icon">
+        <div class="permission-content">
+            <p class="permission-title">Store your Location</p>
+            <p class="permission-subtitle">BlackBuck stores your location data to update your profile with the location
+                for relevant load recommendations and enhanced search experience.</p>
+        </div>
+    </div>
+
+    <div class="permission-item">
+        <img src="images/notification.png" alt="Notification icon" class="icon">
+        <div class="permission-content">
+            <p class="permission-title">Get real-time updates</p>
+            <p class="permission-subtitle">Allow push notifications to get real-time updates.</p>
+        </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="policy-text">
+        <p>To know more about how we collect and use your data, please read our <a href="privacy-policy-bb-app.html"
+                class="policy-link">PrivacyPolicy</a></p>
+    </div>
+
+    <div class="policy-text">
+        <p>By selecting "Agree"you confirm that you have read and agree to the <a href="terms-n-conditions-bb-app.html"
+                class="policy-link">Terms & Conditions</a></p>
+    </div>
+</body>
+
+</html>
